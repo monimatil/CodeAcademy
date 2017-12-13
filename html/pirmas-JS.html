@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--<body onload="inf()"> -->
+<body>
+<script>
+    var a, c, b = 5;             //var = kintamieji
+    a = 3;
+    c = Math.ceil(((a + b * 2)* 2) / 3);
+    d = b * 2; d += a + 1; d *= 2 + 1;
+    d = d / 3;
+   // d = Math.floor (((a + b * 2)* 2) / 3);//
+    d = Math.floor (d);
+    var cnt = 0;
+    function inf() {
+       // alert(c); jei nori kad mestu atsakyma kaip uzklausa
+        var e = document.getElementById('div');
+        e.innerHTML = e.innerHTML + '' + c; //c; ats duoda tik viena karta. e.innerHTML meta i psl ne i console
+        console.log(cnt++ + 'c=' + c + ', d= '+ d); // consolei raso variables // ++cnt parodo kiek kartu paspaudziau. galima naudoti pries arba po cnt nuo to priklauso ar pries skaiciuojant prides arba atims arba po
+
+        var s = "Labas"; // string tipas - eilutes tipas
+        var n = 5; // Number- skaiciaus tipas
+        var m = ['BMW', 'Ford', 'Audi']  // masyvo tipas, prasideda nuo 0
+        m[2] = 'Honda';                  // Audi pakeite i Honda
+        console.log(m[1] + ' ' + m[2]);
+        m[3] = 'Volvo';
+        console.log(m[3]);
+        m[m.length] = 'aaa';
+        console.log(m[4] + ' masyvo dydis = ' + m.length); //' ' padaro tarpa tarp zodziu
+        console.log(JSON.stringify(m));
+        /* OBJEKTAS */
+        var o = {
+            'paskirtis': ' Automobilis',
+            'savybes': {
+                'pavaros': 'automatine',
+                'durys': 4,
+                'info' : function () {
+                    return 'Nera informacijos'
+
+                }
+            }
+        }
+       // console.log('Paskirtis:' + o.paskirtis);
+        console.log('Durys:' + o.savybes.durys); //. kreipesi
+        console.log('Info:' + o.savybes.info());
+        console.log(JSON.stringify(o));          // parodo visa objekta
+
+    }
+
+</script>
+<div id="div" style="border: 1px red solid; min-width: 100px; min-height: 80px"></div>
+<input type="button" value="test" onclick="inf()">
+</body>
+</html>

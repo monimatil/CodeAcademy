@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/stilius.css" type="text/css">
+    <style>
+       body {
+           font-family: 'Open Sans', sans-serif;
+       }
+        #paragrafas {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<!-- anchor linkas-->
+<a href="http://google.lt" target="_blank" title="mano linkas">Eikite i Google</a>
+<!--target atidaro nauja langa-->
+<!--title naugojama google-->
+<!-- tago ID-->
+<p id="paragrafas">abc</p>
+<hr>
+<!--hr uzdeda linija per linija per visa ekrana-->
+<ul>
+    <li>Pirmas</li>
+    <li>Antras</li>
+    <li>
+        Trecias
+        <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+        </ul>
+        <ol>
+            <li>Pitmas</li>
+            <li>Antras</li>
+            <li>Trecias</li>
+        </ol>
+    </li>
+</ul>
+
+<!-- numeruotas sarasas prasideda sk. (ol)-->
+<!--nenumeruojantis sarasas prasideda zenkl.(ul)-->
+<!-- li- linija-->
+<div style="border: 1px red solid; background-color: pink; position: relative">
+    <!--position: relative nauja diva ideda i pirma lentele-->
+    <p>Paragrafas 1</p>
+    <p>Paragrafas 2</p>
+    <div style=" border: 1px green solid; background-color: silver">
+        <span style="color: green">Tekstas</span> kitas
+    </div>
+    <!--shortcut komentaro (cntr /)-->
+     <div style="position: absolute; top: 2px; right: 2px; background-color: white; border: 1px black solid">abc</div>
+    <!--position absoliut-->
+    <div style="position: absolute; height: 150px; width: 150px; top: 50px; left:20px; background-color: brown; z-index: 1; border-radius: 50%"></div>
+    <!--blokas su z- indeksu( iskyla virs visu-->
+    <!-- border-radius apvalina kampus( rasant procentais tarkim 50% padaro apskritima-->
+    <!--kai rasai absolut reikia butinai visus ismatavimus parasyt-->
+    <div style="position: relative; margin: 5px auto;  width: 200px; height: 100px; line-height: 100px; border: 1px blue solid; background-color: wheat; text-align: center">Centras</div>
+    <!--centravimas-->
+    <div style="position: relative; margin: 5px auto;  width: 200px; height: 100px; height: 100px; border: 1px blue solid; background-color: wheat; text-align: center; display: table-cell; vertical-align: middle">Centras 2</div>
+    <!--vertikalus centavimas su table-cell-->
+    <!--margin- atstumimas nuo isores-->
+    <!--vertical-align- zodi centruoja viduri-->
+</div>
+<i class="fa fa-car"></i>
+<i class="fa fa-car" style="font-size:48px;"></i>
+<i class="fa fa-car" style="font-size:60px;color:red;"></i>
+<ul>
+    <li><a herf="http://google.lt" target="_blank"><i class="fa fa-address-book" aria-hidden="true" style="color: red"></i></a>Pirmas</li>
+    <li><i class="fa fa-address-book" aria-hidden="true"></i>antras</li>
+    <li><i class="fa fa-address-book" aria-hidden="true"></i>trecias</li>
+</ul>
+<div style="width: 300px; height: 200px; border: 1px red solid; background-image: url('/images/logo.png'); background-repeat: no-repeat; background-position: center center; background-size: contain">
+
+</div>
+<iframe width="320" height="180" src="https://www.youtube.com/embed/7_LPdttKXPc?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen style="display:block; position: relative; margin: 5px auto; width: 320px"></iframe>
+<!--nukopijuoti embeded code ir pastinti ant viso iframe-->
+
+<!--pirma forma-->
+<!--langas kur gali rasyti puslapyje-->
+<forma action="/html/lenteles.html">
+<table>
+    <tr>
+        <td colspan="2">
+            <table>
+                <tr>
+                    <td><label>Vardas</label></td>
+                    <td><input type="text" name="vardas"></td>
+                    <td><label>Pozicija</label></td>
+                    <td>
+                        <select>
+                            <option name="pozicija"></option>
+                            <option value="0">Darbininkas</option>
+                            <option value="1" selected>Vadybininkas</option>
+                            <option value="2">Darbininkas</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td><label>Pavarde</label></td>
+        <td><input type="text" name="pavarde"></td>
+    </tr>
+    <tr>
+        <td><label>Slaptazodis</label></td>
+        <td><input type="password" name="slaptazodis"></td>
+    </tr>
+    <tr>
+        <td><label>Atostogos</label></td>
+        <td><input type="checkbox" name="atostogos"></td>
+    </tr>
+    <tr>
+        <td><label>Pastaba</label></td>
+        <td><textarea name="pastaba" rows="5"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit" value="Ivykdyti"></td>
+    </tr>
+</table>
+</forma>
+</body>
+</html>
