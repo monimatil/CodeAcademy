@@ -1,0 +1,254 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savarankiskas(1)</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body >
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+<style>
+    body{
+        background-color: #84a1e1;
+        color: white;
+        text-align: center;
+    }
+    #conv, #operator_1, #operator_2{
+        background-color: #193366;
+        color: white;
+        border-color: #2851a4;
+        width: 100px;
+        height: 50px;
+    }
+    #a, #rezult{
+        background-color: #c1d0f0;
+        border-color: #193366;
+        width: 250px;
+        height: 50px;
+    }
+</style>
+
+<script>
+	function convert(o1, o2){
+		var am_str = document.getElementById("a").value;
+        var am = parseFloat(am_str);
+        // Is EUR
+        if(o1 == "eur" && o2 == "usd"){
+                var x =am * 1.22;
+                return x;
+            }
+            else if(o1 == "eur" && o2 == "aud"){
+            	var x =am * 1.53;
+                return x;
+            }
+            else if(o1 == "eur" && o2 == "gbp"){
+            	var x =am * 0.88;
+                return x;
+            }
+            else if(o1 == "eur" && o2 == "cad"){
+            	var x =am * 1.52;
+                return x;
+            }
+            else if(o1 == "eur" && o2 == "dkk"){
+            	var x =am * 7.44;
+                return x;
+            }
+            // Is USD
+            else if(o1 == "usd" && o2 == "eur"){
+            	var x =am * 0.82;
+                return x;
+            }
+            else if(o1 == "usd" && o2 == "aud"){
+            	var x =am * 1.25;
+                return x;
+            }
+            else if(o1 == "usd" && o2 == "gbp"){
+            	var x =am * 0.72;
+                return x;
+            }
+            else if(o1 == "usd" && o2 == "cad"){
+            	var x =am * 1.24;
+                return x;
+            }
+            else if(o1 == "usd" && o2 == "dkk"){
+            	var x =am * 6.09;
+                return x;
+            }
+            //is AUD
+            else if(o1 == "aud" && o2 == "eur"){
+            	var x =am * 0.65;
+                return x;
+            }
+            else if(o1 == "aud" && o2 == "usd"){
+            	var x =am * 0.79;
+                return x;
+            }
+            else if(o1 == "aud" && o2 == "gbp"){
+            	var x =am * 0.57;
+                return x;
+            }
+            else if(o1 == "aud" && o2 == "cad"){
+            	var x =am * 0.99;
+                return x;
+            }
+            else if(o1 == "aud" && o2 == "dkk"){
+            	var x =am * 4.86;
+                return x;
+            }
+            //is GBR
+            else if(o1 == "gbp" && o2 == "eur"){
+            	var x =am * 1.13;
+                return x;
+            }
+            else if(o1 == "gbp" && o2 == "usd"){
+            	var x =am * 1.39;
+                return x;
+            }
+            else if(o1 == "gbp" && o2 == "aud"){
+            	var x =am * 1.74;
+                return x;
+            }
+            else if(o1 == "gbp" && o2 == "cad"){
+            	var x =am * 1.73;
+                return x;
+            }
+            else if(o1 == "gbp" && o2 == "dkk"){
+            	var x =am * 8.45;
+                return x;
+            }
+            // is CAD
+            else if(o1 == "cad" && o2 == "eur"){
+            	var x =am * 0.66;
+                return x;
+            }
+            else if(o1 == "cad" && o2 == "usd"){
+            	var x =am * 0.80;
+                return x;
+            }
+            else if(o1 == "cad" && o2 == "aud"){
+            	var x =am * 1.01;
+                return x;
+            }
+            else if(o1 == "cad" && o2 == "gbp"){
+            	var x =am * 0.58;
+                return x;
+            }
+            else if(o1 == "cad" && o2 == "dkk"){
+            	var x =am * 4.89;
+                return x;
+            }
+            // Is DKK
+            else if(o1 == "dkk" && o2 == "eur"){
+            	var x =am * 0.13;
+                return x;
+            }
+            else if(o1 == "dkk" && o2 == "usd"){
+            	var x =am * 0.16;
+                return x;
+            }
+            else if(o1 == "dkk" && o2 == "aud"){
+            	var x =am * 0.21;
+                return x;
+            }
+            else if(o1 == "dkk" && o2 == "gbp"){
+            	var x =am * 0.12;
+                return x;
+            }
+            else if(o1 == "dkk" && o2 == "cad"){
+            	var x =am * 0.21;
+                return x;
+            }
+            else{
+            	console.log("nezinoma operacija");
+                return x;
+            }
+	}
+	function convertRezult(){
+           
+            var o1 = document.getElementById("operator_1").value;
+            var o2 = document.getElementById("operator_2").value;
+
+            var rez  = convert(o1, o2);
+            
+            document.getElementById("rezult").value = rez; 
+        }
+
+</script>
+
+</head>
+<body >
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mt-4">
+            <div name="converter">
+                <div class="tr">
+                    <div class="td">
+                        <input type="text" id="a" placeholder="Amount"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+            <p>Convert to</p>
+        </div>
+        <div class="col-sm-4 mt-4">
+            <div name="converter">
+                <div class="tr">
+                    <div class="td">
+                        <input type="text" id="rezult" placeholder="...."/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mt-2">
+            <div name="converter">
+                <div class="tr">
+                    <div class="td">
+                        <select id="operator_1">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="aud">AUD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="cad">CAD</option>
+                            <option value="dkk">DKK</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 mt-2">
+            <button id="conv" onclick="convertRezult()">Convert</button>
+        </div>
+        <div class="col-sm-4 mt-2">
+            <div name="converter">
+                <div class="tr">
+                    <div class="td">
+                        <select id="operator_2">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="aud">AUD</option>
+                            <option value="gbp">GBP</option>
+                            <option value="cad">CAD</option>
+                            <option value="dkk">DKK</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
