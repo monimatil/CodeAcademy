@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis 01-19(1)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body >
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+    	background-color: #8a8a5c;
+    }
+    .container{
+    	margin-top: 50px;
+    }
+	#app{
+	background:#c2c2a3;
+	border:1px solid #aaa;
+	border-radius: 5px;
+	padding:10px;
+}
+
+#app_table{
+	width:100%;
+
+}
+.txt1, .txt2{
+	padding-left: 20px;
+}
+#zod1, #zod2, #rez{
+	background-color: #d6d6c2;
+}
+.credits{
+	text-align:center;
+}
+
+.middletext{
+	color: #aaa;
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 43px;
+}
+</style>
+<script>
+	function keisti(){
+		var zodis1 = document.getElementById("zod1").value;
+		var zodis2 = document.getElementById("zod2").value;
+
+		if(zodis1 == zodis2){
+            document.getElementById("rez").value = "Zodziai yra vienodi";
+        }
+        else{
+        	document.getElementById("rez").value = "Zodziai nera vienodi";
+        }
+		
+
+	}
+</script>
+</head>
+<body >
+
+<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div id="app">				
+					<div class="row"> 
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label class="txt1" for="word1">Word</label>
+								<input type="text" class="form-control" id="zod1" placeholder="zodis">
+							</div>
+						</div>
+						
+						<div class="col-lg-2"><span class="middletext"><-></span></div>
+						
+						<div class="col-lg-5">
+							<div class="form-group">
+								<label class="txt2" for="word1">Word</label>
+								<input type="text" class="form-control" id="zod2" placeholder="zodis">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
+					    <div class="form-group">
+						    <button id="check" class="btn btn-success" onclick="keisti()" ><i class="fa fa-eye" aria-hidden="true"></i> Tikrinti</button>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div id="app">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<input type="text" class="form-control" id="rez" placeholder="Rezultatas">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
