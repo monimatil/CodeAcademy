@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis 01-19(2)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+    	background-color: #ffff66;
+    }
+    .container{
+    	margin-top: 80px;
+    	margin-left: 22%;
+    }
+    /*lentele*/
+	#tbl{
+	background-color:rgba(153, 153, 0, 0.5); /* 0.5 prie spalvos lentele padaro transperant*/
+	border:1px solid #4d4d00;
+	border-radius: 5px;
+	padding:10px;
+    }
+    #app_table{
+	width:100%;
+
+    }
+    /*names*/
+    .txt, .fraze1, .fraze2, .p_txt{
+	padding-left: 20px;
+	color: #666600;
+    }
+    /*laukeliai*/
+    #zod1, #zod2, #rez{
+	background-color: #d6d6c2;
+    }
+    /*ikonu spalva*/
+    .fa-star{
+    	color: #ffffcc;
+    }
+    .credits{
+	text-align:center;
+    }
+
+    .middletext{
+	color: #aaa;
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 43px;
+    }
+</style>
+
+<script>
+	function Pakeitimas(){
+		//randa laukelyje irasytus zodzius
+		var t = document.getElementById("tekstas").value;
+		var f1 = document.getElementById("fraze1").value;
+		var f2 = document.getElementById("fraze2").value;
+
+        
+		if(t.search(f1) >= 0){
+        var p = t.replace(f1,f2);
+        document.getElementById("p_tekstas").value = p;
+        }else{
+        document.getElementById("p_tekstas").value = "Pasirinkatas zodis nerastas";
+       	
+        }
+	}
+</script>
+</head>
+<body >
+    <div class="container">
+		<div class="row">
+		    <div class="col-lg-4">
+				<div id="tbl">				
+					<div class="row"> 
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label class="txt" for="txt"><i class="fa fa-star" aria-hidden="true"></i> Tekstas</label>
+								<input type="text" class="form-control" id="tekstas" placeholder="Tekstas...">
+							</div>
+						</div>
+					</div>
+					<div class="row"> 
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label class="fraze1" for="fraze1"><i class="fa fa-star" aria-hidden="true"></i> Pasirinkti zodi</label>
+								<input type="text" class="form-control" id="fraze1" placeholder="Zodis">
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label class="fraze2" for="fraze2"><i class="fa fa-star" aria-hidden="true"></i> Pakeisti zodi i</label>
+								<input type="text" class="form-control" id="fraze2" placeholder="Zodis">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<button id="go" class="btn btn-success" onclick="Pakeitimas()"><i class="fa fa-spinner" aria-hidden="true"></i> Vykdyti</button>
+					</div>
+			    </div>
+		    </div>
+		    <div class="col-lg-4">
+				<div id="tbl">				
+					<div class="row"> 
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label class="p_txt" for="p_txt"><i class="fa fa-star" aria-hidden="true"></i> Pakeistas Tekstas</label>
+								<input type="text" class="form-control" id="p_tekstas" placeholder="Rezultatas">
+							</div>
+						</div>
+					</div>
+				</div>	
+		    </div>
+	    </div>
+    </div>
+
+
+</body>
+</html>
